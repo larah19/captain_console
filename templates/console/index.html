@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'console/consolefilter.html' %}
+
+
+    <div class="nintendo">
+        <h3 class="category">Nintendo</h3>
+        <div class="consoles">
+            {% for console in nintendo %}
+                {% include 'console/single_console.html' with console=console %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="microsoft">
+        <h3 class="category">Microsoft</h3>
+        <div class="consoles">
+            {% for console in microsoft %}
+                {% include 'console/single_console.html' with console=console %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="sony">
+        <h3 class="category">Sony</h3>>
+        <div class="consoles">
+            {% for console in sony %}
+                {% include 'console/single_console.html' with console=console %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="sega">
+        <h3 class="category">SEGA</h3>
+        <div class="consoles">
+            {% for console in sega %}
+                {% include 'console/single_console.html' with console=console %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

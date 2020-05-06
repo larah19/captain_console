@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'console/consolefilter.html' %}
+    <h3 class="category">{{ group }}</h3>
+    <div class="consoles">
+        {% for console in consoles %}
+            {% include 'console/single_console.html' with console=console %}
+        {%  endfor %}
+    </div>
+{% endblock %}

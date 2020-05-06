@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway';
+    font-weight: bold;
+}
+
+.navbar {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #F25F5C 0%, #D62828 .01%, #FFE382 100%);
+}
+
+#filter-navbar {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #F25F5C 0%, #D62828 .01%, #FFE382 100%);
+}
+
+.category {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#nav-options {
+    text-align: right;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    float:right;
+}
+
+.navbar-brand {
+    position: relative;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#navbar-animation {
+    position: absolute;
+    top: -1000px;
+    bottom: -1000px;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #EF626C, #84DCCF);
+    animation: animate-navbar 3s linear infinite alternate;
+}
+
+#search-box {
+    width: 75%;
+}
+
+#search-btn {
+    display: block;
+}
+
+.input-group {
+    position: relative;
+    padding-top: 5px;
+    display: inline-flex;
+}
+
+a {
+    color: white !important;
+}
+
+a:hover {
+    background-image: linear-gradient(#EF626C, white);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    animation: linear-under .5s 1 both;
+}
+
+@keyframes line-under {
+    0% {
+        background-size: 0px 3px;
+    }
+    100% {
+        background-size: 100% 3px;
+    }
+}
+
+@keyframes animate-navbar {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotateZ(180deg);
+    }
+}
+
+@keyframes circle-around {
+    0%  {
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+    }
+    25% {
+        background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+    }
+    50% {
+        background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+    }
+    75% {
+        background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+    }
+    100% {
+        background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    }
+}
+
+.consoles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 3rem;
+}
+
+.console a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.consoles .console {
+    border-radius: 0;
+    margin: 0;
+    background-image: none;
+    background-color: white;
+    text-align: center;
+}
+
+.consoles .console:hover {
+    background-image: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black);
+    background-repeat: no-repeat;
+    background-position: left top, right top, right bottom, left bottom;
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+    animation: circle-around .5s ease-in both;
+    cursor: pointer;
+}
+
+.img-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+
+.console-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    transition: transform 1s ease-in;
+}
+
+.brands {
+    width: 75%;
+    align-items: center;
+    justify-items: center;
+}
+
+.brand {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 0;
+    margin: 0;
+}
+
+.brand .brand-img {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.block {
+    display: block;
+}
+
+.profile-image {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    float: right;
+    border-radius: 50%;
+}
+
+.aboutus {
+    background-color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #FCBF49;
+}

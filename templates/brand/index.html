@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2 class="title">Brands</h2>
+    <div class="brands">
+        {% for brand in brands %}
+            {% include 'brand/single_brand.html' with brand=brand %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
