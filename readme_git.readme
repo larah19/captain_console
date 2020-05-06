@@ -1,0 +1,6 @@
+when creating new branch, 
+use `git checkout -b <branchname>`
+then to make your branch track feature/integration, type
+`git branch --set-upstream-to=origin/feature/integration`
+
+
