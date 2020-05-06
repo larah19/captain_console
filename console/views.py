@@ -16,9 +16,9 @@ def index(request):
         } for x in Console.objects.filter(name__icontains=search_filter)]
         # TODO: Exception handling, No results.
         # TODO: Find a way to make Json Response format into a different HTML file, not index.html
-        # return JsonResponse({'data': consoles})
-        result = {'search_result': consoles}
-        return redirect('')     # render(request, 'console/filterindex.html', result)
+        return JsonResponse({'data': consoles})
+        # result = {'search_result': consoles}
+        # return redirect('')     # render(request, 'console/filterindex.html', result)
 
     context = {'nintendo': Console.objects.filter(brand_id=1).order_by('name'),
                'microsoft': Console.objects.filter(brand_id=2).order_by('name'),
@@ -28,23 +28,22 @@ def index(request):
     return render(request, 'console/index.html', context)
 
 
-def get_consoles_by_brand(request, brand):
+# def get_consoles_by_brand(request, brand):
+#
+#     print(brand, 'getting consoles!')
+#     return render(request, 'console/filterindex.html', {'consoles': []})
+#
+#
+# def get_consoles_by_type(request, type):
+#     print(type, 'getting by types')
+#     return render(request, 'console/filterindex.html', {'consoles': []})
 
-    print(brand, 'getting consoles!')
-    return render(request, 'console/filterindex.html', {'consoles': []})
 
-
-def get_consoles_by_type(request, type):
-    print(type, 'getting by types')
-    return render(request, 'console/filterindex.html', {'consoles': []})
-
-
-def get_consoles_by_group(request, group):
+def get_consoles_by_group(request):
     path = request.path
 
     group = path.strip().split('/')[2]
 
-    print(group, 'foooooooooo')
     if group == 'nintendo':
         context = {'consoles': Console.objects.filter(brand_id=1).order_by('name'),
                    'group': 'Nintendo'}
