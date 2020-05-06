@@ -12,5 +12,5 @@ urlpatterns = [
     path('search/', views.get_consoles_by_group, name='console-searchindex'),
     path('<int:id>', views.get_console_by_id, name="console_details"),
     # path'fun_stuff', views.get_/
-
+#     path'searching0', views.get....
 ]
