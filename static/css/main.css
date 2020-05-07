@@ -25,6 +25,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category {
+    font-family: 'Nico Moji', cursive;
+    font-size: 28px;
     text-align: center;
     text-decoration: underline;
 }
@@ -211,9 +213,24 @@ a:hover {
     border-radius: 50%;
 }
 
+.title {
+    font-family: 'Nico Moji', cursive;
+}
+
 .aboutus {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
     background-color: white;
     border-style: solid;
+    padding: 3rem;
     border-radius: 10px;
     border-color: #FCBF49;
+}
+
+#aboutus-img {
+    float: right;
+    width: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
