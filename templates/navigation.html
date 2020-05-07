@@ -24,10 +24,10 @@
 {#            {% endif %}#}
             <li>
                 <div class="input-group">
-                    <input type="search" class="form-control" id="search-box" placeholder="Enter your search here..." />
-                    <div class="input-group-btn">
-                        <button type="button" id="search-btn" class="btn btn-default" >Search</button>
-                    </div>
+                    <form id="search" action="{% url 'search-results' %}" method="get">
+                        <input name="search_filter" class="form-control" id="search-box" type="text" placeholder="Search for a product..." />
+                        <button type="button" id="search-btn" class="btn btn-default" value=""/>
+                    </form>
                 </div>
             </li>
             <li><a class="nav-link">Cart</a></li>

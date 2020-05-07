@@ -1,3 +1,6 @@
+@import url(//fonts.googleapis.com/earlyaccess/nicomoji.css);
+
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto';
@@ -33,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Nico Moji', cursive;
 }
 
 .navbar-nav {
@@ -43,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     font-size: 26px;
     font-weight: bold;
+    font-family: 'Nico Moji', cursive;
 }
 
 #navbar-animation {
@@ -61,7 +66,19 @@ h1, h2, h3, h4, h5, h6 {
 
 #search-btn {
     display: block;
+    height: 35px;
+    width: 35px;
+    background-image: url(https://simpleicon.com/wp-content/uploads/active-search.svg);
+    background-size: 35px 35px;
+    background-color: white;
+    background-position: center;
 }
+
+/*#button-holder img {*/
+/*    display: flex;*/
+/*    height: 35px;*/
+/*    width: 35px;*/
+/*}*/
 
 .input-group {
     position: relative;

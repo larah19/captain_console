@@ -1,25 +1,10 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from console.models import Console
 from django.shortcuts import redirect
 
 
 def index(request):
-    if 'search_filter' in request.GET:
-        search_filter = request.GET['search_filter']
-        consoles = [{
-            'id': x.id,
-            'name': x.name,
-            'description': x.description,
-            'price': x.price,
-            'firstImage': x.consoleimage_set.first().image
-        } for x in Console.objects.filter(name__icontains=search_filter)]
-        # TODO: Exception handling, No results.
-        # TODO: Find a way to make Json Response format into a different HTML file, not index.html
-        return JsonResponse({'data': consoles})
-        # result = {'search_result': consoles}
-        # return redirect('')     # render(request, 'console/filterindex.html', result)
-
     context = {'nintendo': Console.objects.filter(brand_id=1).order_by('name'),
                'microsoft': Console.objects.filter(brand_id=2).order_by('name'),
                'sony': Console.objects.filter(brand_id=3).order_by('name'),
@@ -27,6 +12,14 @@ def index(request):
                }
     return render(request, 'console/index.html', context)
 
+
+def search_results(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        consoles = [console for console in Console.objects.filter(name__icontains=search_filter)]
+        # TODO: Exception handling, if no results.
+        context = {'consoles': consoles}
+        return render(request, 'console/filterindex.html', context)
 
 # def get_consoles_by_brand(request, brand):
 #
@@ -66,7 +59,6 @@ def get_consoles_by_group(request):
     #     # TODO: Error handling, category does not exist, url not mapped.
 
     return render(request, 'console/filterindex.html', context)
-
 
 
 def get_console_by_id(request, id):
