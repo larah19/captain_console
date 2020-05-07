@@ -3,11 +3,11 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: Roboto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway';
+    font-family: Roboto;
     font-weight: bold;
 }
 
@@ -25,18 +25,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .category {
+    font-family: Nico Moji, sans-serif;
     text-align: center;
-    text-decoration: underline;
+    font-size: 26px;
 }
 
 #nav-options {
     text-align: right;
+    font-family: 'Nico Moji', cursive;
 }
 
 .nav-link {
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Nico Moji', cursive;
 }
 
 .navbar-nav {
@@ -216,4 +217,43 @@ a:hover {
     border-style: solid;
     border-radius: 10px;
     border-color: #FCBF49;
+}
+
+.site-footer {
+    background-color:#003049;
+    padding-top:15px;
+    padding-bottom:5px ;
+    font-size:12px;
+    line-height: 24px;
+     color:#fff;
+    font-family: Roboto, sans-serif;
+    bottom: 0;
+    position: fixed;
+    width: 100%
+}
+
+.site-footer hr {
+  border-top-color:#bbb;
+  opacity:0.5;
+   size: 5px;
+}
+
+.site-footer h5 {
+    color:#fff;
+    font-size:20px;
+    text-transform:uppercase;
+    margin-top: 7px;
+    letter-spacing:2px;
+    font-family: Nico Moji, sans-serif;
+    line-height: 1.10;
+}
+
+.site-footer ul {
+    line-height: 0.5;
+    list-style: none;
+    padding-left: 0;
+}
+
+.base {
+    padding-bottom: 160px;
 }
