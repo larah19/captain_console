@@ -21,16 +21,11 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, #F25F5C 0%, #D62828 .01%, #FFE382 100%);
+    background: linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%);
 }
 
 .category {
-<<<<<<< HEAD
     font-family: Nico Moji, sans-serif;
-=======
-    font-family: 'Nico Moji', cursive;
-    font-size: 28px;
->>>>>>> 085b1ffdd4e5b1d9e13730df23dc2d1223c8b06b
     text-align: center;
     font-size: 26px;
 }
@@ -231,15 +226,21 @@ a:hover {
     border-radius: 10px;
     border-color: #FCBF49;
 }
+#aboutus-img {
+    float: right;
+    width: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
 
-<<<<<<< HEAD
+
 .site-footer {
     background-color:#003049;
     padding-top:15px;
     padding-bottom:5px ;
     font-size:12px;
     line-height: 24px;
-     color:#fff;
+    color:#fff;
     font-family: Roboto, sans-serif;
     bottom: 0;
     position: fixed;
@@ -270,12 +271,6 @@ a:hover {
 
 .base {
     padding-bottom: 160px;
-=======
-#aboutus-img {
-    float: right;
-    width: 300px;
-    margin-left: 10px;
-    margin-bottom: 10px;
->>>>>>> 085b1ffdd4e5b1d9e13730df23dc2d1223c8b06b
 }
+
 
