@@ -24,12 +24,24 @@
 {#            {% endif %}#}
             <li>
                 <div class="input-group">
-                    <input type="search" class="form-control" id="search-box" placeholder="Enter your search here..." />
-                    <div class="input-group-btn">
-                        <button type="button" id="search-btn" class="btn btn-default" >Search</button>
-                    </div>
+                    <form id="search" action="{% url 'search-results' %}" method="get">
+                        <input name="search_filter" class="form-control" id="search-box" type="text" placeholder="Search for a product..." />
+                        <button type="button" id="search-btn" class="btn btn-default" value=""/>
+                    </form>
                 </div>
             </li>
+{#            <li>#}
+{#                <div class="input-group">#}
+{#                    <input type="text" name="search_filter" class="form-control" id="search-box" placeholder="Search for a product..." />#}
+{#                    <div class="input-group-btn">#}
+{#                        <button type="button" id="search-btn" class="btn btn-default" >#}
+{#                            <div id="button-holder">#}
+{#                                <img id="search-icon" src="https://www.pinclipart.com/picdir/middle/485-4851736_free-png-search-icon-search-icon-free-download.png"/>#}
+{#                            </div>#}
+{#                        </button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </li>#}
             <li><a class="nav-link">Cart</a></li>
         </ul>
 
