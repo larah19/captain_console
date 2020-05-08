@@ -234,3 +234,38 @@ a:hover {
     margin-left: 10px;
     margin-bottom: 10px;
 }
+
+.left {
+    display: inline-block;
+    width: 55%;
+    padding-right: 2.5rem;
+}
+
+.right {
+    display: inline-block;
+    width: 35%;
+    padding-left: 2.5rem;
+}
+
+.details-img {
+    float: right;
+    width: 300px;
+    margin-left: 20px;
+}
+
+.description {
+    text-align: justify;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.price {
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-align: center;
+}
+
+.details-console-brand {
+    font-size: 20px;
+    font-weight: bold;
+}

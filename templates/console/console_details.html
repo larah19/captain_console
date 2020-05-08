@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">{{ console.name }}</h1>
+
+    <div class="left">
+        <div class="description">
+            <h3>Description</h3>
+            <p>{{ console.description }}</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <img src="{{ console.consoleimage_set.first.image}}" class="details-img" />
+        <p class="price">${{ console.price }}</p>
+    </div>
+
+    <p class="details-console-brand">Brand: {{ console.brand.name }}</p>
+
+
+{% endblock %}

@@ -62,6 +62,5 @@ def get_consoles_by_group(request):
 
 
 def get_console_by_id(request, id):
-    return render(request, 'console/console_details.html', {
-        'console': get_object_or_404(Console, pk=id)
-    })
+    context = {'console': get_object_or_404(Console, pk=id)}
+    return render(request, 'console/console_details.html', context)
