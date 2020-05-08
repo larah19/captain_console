@@ -3,7 +3,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -27,13 +26,14 @@ h1, h2, h3, h4, h5, h6 {
 .category {
     font-family: 'Nico Moji', sans-serif;
     text-align: center;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 #nav-options {
     text-align: right;
-    font-family: 'Nico Moji', cursive;
+    font-family: 'Nico Moji', sans-serif;
 }
+
 
 .nav-link {
     font-size: 20px;
@@ -41,14 +41,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-nav {
-    float:right;
+    float: right;
 }
 
 .navbar-brand {
     position: relative;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
-    font-family: 'Nico Moji', cursive;
+    font-family: 'Nico Moji', sans-serif;
 }
 
 #navbar-animation {
@@ -63,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #search-box {
     width: 75%;
+    font-family: Roboto, sans-serif;
 }
 
 #search-btn {
