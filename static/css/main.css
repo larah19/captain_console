@@ -313,3 +313,9 @@ a:hover {
 .base {
     padding-bottom: 160px;
 }
+
+#sign-up-link {
+    font-family: 'Roboto';
+    color: blue !important;
+    text-decoration: underline blue;
+}

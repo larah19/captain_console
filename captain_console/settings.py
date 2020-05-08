@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'console.apps.ConsoleConfig',
     'brand.apps.BrandConfig',
-    'aboutus.apps.AboutusConfig'
+    'aboutus.apps.AboutusConfig',
+    'user.apps.UserConfig'
 ]
 
 MIDDLEWARE = [
