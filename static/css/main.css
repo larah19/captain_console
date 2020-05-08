@@ -246,10 +246,10 @@ a:hover {
     display: inline-block;
     width: 40%;
     padding-left: 2.5rem;
+    text-align: center;
 }
 
 .details-img {
-    float: right;
     width: 300px;
     margin-left: 20px;
 }
@@ -264,7 +264,6 @@ a:hover {
     font-family: 'Nico Moji', cursive;
     font-weight: bold;
     font-size: 26px;
-    text-align: center;
 }
 
 .details-console-brand {
@@ -273,7 +272,12 @@ a:hover {
 }
 
 #add-to-cart {
-    magin: 0 auto;
-    display: inline-block;
-    margin: 0;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    background: #FEE281;
+    border: 1px solid #000000;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+
 }
