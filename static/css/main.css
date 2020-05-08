@@ -212,7 +212,7 @@ a:hover {
 }
 
 .aboutus {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 21px;
     background-color: white;
@@ -249,7 +249,7 @@ a:hover {
 
 .description {
     text-align: justify;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
@@ -265,7 +265,7 @@ a:hover {
 }
 
 #add-to-cart {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: bold;
     background: #FEE281;
