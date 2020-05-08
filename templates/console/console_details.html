@@ -4,6 +4,7 @@
     <h1 class="title">{{ console.name }}</h1>
 
     <div class="left">
+        <p class="details-console-brand">Brand: {{ console.brand.name }}</p>
         <div class="description">
             <h3>Description</h3>
             <p>{{ console.description }}</p>
@@ -12,10 +13,11 @@
 
     <div class="right">
         <img src="{{ console.consoleimage_set.first.image}}" class="details-img" />
-        <p class="price">${{ console.price }}</p>
+        <p class="price" id="console-price">${{ console.price }}</p>
+        <button type="button" id="add-to-cart" class="btn btn-default">Add to Cart</button>
     </div>
 
-    <p class="details-console-brand">Brand: {{ console.brand.name }}</p>
+
 
 
 {% endblock %}

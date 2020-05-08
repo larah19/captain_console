@@ -237,13 +237,14 @@ a:hover {
 
 .left {
     display: inline-block;
-    width: 55%;
+    width: 48%;
+    text-align: justify;
     padding-right: 2.5rem;
 }
 
 .right {
     display: inline-block;
-    width: 35%;
+    width: 40%;
     padding-left: 2.5rem;
 }
 
@@ -260,12 +261,19 @@ a:hover {
 }
 
 .price {
-    font-family: 'Roboto';
-    font-size: 20px;
+    font-family: 'Nico Moji', cursive;
+    font-weight: bold;
+    font-size: 26px;
     text-align: center;
 }
 
 .details-console-brand {
     font-size: 20px;
     font-weight: bold;
+}
+
+#add-to-cart {
+    magin: 0 auto;
+    display: inline-block;
+    margin: 0;
 }
