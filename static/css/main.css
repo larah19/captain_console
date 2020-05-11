@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     font-size: 28px;
     font-weight: bold;
-    font-family: 'Nico Moji', sans-serif;
+    font-family: Nico Moji, sans-serif;
 }
 
 #navbar-animation {
@@ -208,11 +208,11 @@ a:hover {
 }
 
 .title {
-    font-family: 'Nico Moji', cursive;
+    font-family: Nico Moji, sans-serif;
 }
 
 .aboutus {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 18px;
     line-height: 21px;
     background-color: white;
@@ -249,12 +249,12 @@ a:hover {
 
 .description {
     text-align: justify;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 16px;
 }
 
 .price {
-    font-family: 'Nico Moji', cursive;
+    font-family: Nico Moji, sans-serif;
     font-weight: bold;
     font-size: 26px;
 }
@@ -265,7 +265,7 @@ a:hover {
 }
 
 #add-to-cart {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: bold;
     background: #FEE281;
@@ -315,7 +315,10 @@ a:hover {
 }
 
 #sign-up-link {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     color: blue !important;
     text-decoration: underline blue;
 }
+
+
+
