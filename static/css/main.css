@@ -320,5 +320,14 @@ a:hover {
     text-decoration: underline blue;
 }
 
+.order-by-option {
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
 
+.order-by-option:focus {
+    font-weight: bold;
+}
 

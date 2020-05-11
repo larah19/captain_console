@@ -21,6 +21,22 @@ def search_results(request):
         context = {'consoles': consoles}
         return render(request, 'console/filterindex.html', context)
 
+
+def order_by(request):
+    if 'order_by' in request.GET:
+        attribute = request.GET['order_by']
+        if attribute == "price_desc":
+            consoles = [console for console in Console.objects.all().order_by('-price')]
+        elif attribute == "price_asc":
+            consoles = [console for console in Console.objects.all().order_by('price')]
+        elif attribute == "name":
+            consoles = [console for console in Console.objects.all().order_by('name')]
+        # else:
+        #     # TODO: Error handling. Not possible to order by.
+
+        context = {'consoles': consoles}
+        return render(request, 'console/filterindex.html', context)
+
 # def get_consoles_by_brand(request, brand):
 #
 #     print(brand, 'getting consoles!')

@@ -10,5 +10,6 @@ urlpatterns = [
     path('handheld/', views.get_consoles_by_group, name="handheld-index"),
     path('home_consoles/', views.get_consoles_by_group, name="homeconsole-index"),
     path('search/', views.search_results, name='search-results'),
+    path('order_by/', views.order_by, name='order-by'),
     path('<int:id>', views.get_console_by_id, name="console_details")
 ]
