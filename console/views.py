@@ -37,17 +37,6 @@ def order_by(request):
         context = {'consoles': consoles}
         return render(request, 'console/filterindex.html', context)
 
-# def get_consoles_by_brand(request, brand):
-#
-#     print(brand, 'getting consoles!')
-#     return render(request, 'console/filterindex.html', {'consoles': []})
-#
-#
-# def get_consoles_by_type(request, type):
-#     print(type, 'getting by types')
-#     return render(request, 'console/filterindex.html', {'consoles': []})
-
-
 def get_consoles_by_group(request):
     path = request.path
 

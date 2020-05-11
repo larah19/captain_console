@@ -37,15 +37,16 @@ $(document).ready(function() {
 // });
 
 document.getElementById("name-az").onclick = function () {
-    window.location.href = "consoles/order_by/?order_by=name";
+    console.log("hello world");
+    window.location = '/consoles/order_by/?order_by=name';
 };
 
 document.getElementById("price-asc").onclick = function () {
-    window.location.href = "consoles/order_by/?order_by=price_asc";
+    window.location = '/consoles/order_by/?order_by=price_asc';
 };
 
 document.getElementById("price-desc").onclick = function () {
-    window.location.href = "consoles/order_by/?order_by=price_desc";
+    window.location = '/consoles/order_by/?order_by=price_desc';
 };
 
 
