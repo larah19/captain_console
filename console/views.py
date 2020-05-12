@@ -34,7 +34,6 @@ def search_results(request):
 
 def get_consoles_by_group(request):
     path = request.path
-
     group = path.strip().split('/')[2]
 
     if group == 'nintendo':

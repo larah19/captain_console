@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+
 .navbar-nav {
     float: right;
 }
@@ -59,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     background-image: linear-gradient(to right, #EF626C, #84DCCF);
     animation: animate-navbar 3s linear infinite alternate;
+}
+
+#search-align{
+    padding-top: 10px;
+    padding-left: 7px;
 }
 
 #search-box {
@@ -321,4 +327,156 @@ a:hover {
 }
 
 
+#cart-dropdown{
+    padding-top: 7px;
+    padding-right: 5px;
+    float: right;
+}
 
+.cart-btn{
+    overflow: auto;
+    padding: 3px;
+    margin: 3px;
+    font-size: 16px;
+}
+
+.cart-menu{
+    z-index: 2;
+    position: absolute;
+}
+#cart-count{
+    background-color: #FEE281;
+    color: black;
+    font-family: Roboto, sans-serif;
+    border: black;
+}
+
+.cart{
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #FCBF49;
+}
+
+.cart-header {
+    font-weight:bold;
+    font-size: 1.25em;
+    color: #333;
+    font-family: Roboto, sans-serif, sans-serif;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 3px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 18%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 25%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 24px ;
+    color: black;
+    margin-right: 20px;
+    font-family: Nico Moji, sans-serif;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.3em;
+    font-family: Roboto, sans-serif;
+}
+
+
+.btn-checkout {
+    float: right;
+    margin-top: 30px;
+}
+
+#checkout{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background: #FEE281;
+    border: 1px solid #000000;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    text-align: end;
+}
+
+.console-name{
+
+}
+
+.console-price{
+
+}
