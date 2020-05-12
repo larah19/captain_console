@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import console
-
+# '' = Default home page
 urlpatterns = [
     path('', include('console.urls')),
     path('admin/', admin.site.urls),
