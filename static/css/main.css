@@ -3,11 +3,10 @@
 
 * {
     box-sizing: border-box;
-    font-family: Roboto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-weight: bold;
 }
 
@@ -27,13 +26,14 @@ h1, h2, h3, h4, h5, h6 {
 .category {
     font-family: 'Nico Moji', sans-serif;
     text-align: center;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 #nav-options {
     text-align: right;
-    font-family: 'Nico Moji', cursive;
+    font-family: 'Nico Moji', sans-serif;
 }
+
 
 .nav-link {
     font-size: 20px;
@@ -41,14 +41,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-nav {
-    float:right;
+    float: right;
 }
 
 .navbar-brand {
     position: relative;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
-    font-family: 'Nico Moji', cursive;
+    font-family: Nico Moji, sans-serif;
 }
 
 #navbar-animation {
@@ -63,6 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #search-box {
     width: 75%;
+    font-family: Roboto, sans-serif;
 }
 
 #search-btn {
@@ -74,12 +75,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
     background-position: center;
 }
-
-/*#button-holder img {*/
-/*    display: flex;*/
-/*    height: 35px;*/
-/*    width: 35px;*/
-/*}*/
 
 .input-group {
     position: relative;
@@ -154,7 +149,7 @@ a:hover {
 }
 
 .consoles .console:hover {
-    background-image: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black);
+    background-image: linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
@@ -185,10 +180,11 @@ a:hover {
 }
 
 .brand {
+    width: 700px;
     display: grid;
     justify-items: center;
     align-items: center;
-    border-radius: 0;
+    border-radius: 10px;
     margin: 0;
 }
 
@@ -213,11 +209,11 @@ a:hover {
 }
 
 .title {
-    font-family: 'Nico Moji', cursive;
+    font-family: Nico Moji, sans-serif;
 }
 
 .aboutus {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     font-size: 18px;
     line-height: 21px;
     background-color: white;
@@ -233,6 +229,52 @@ a:hover {
     margin-bottom: 10px;
 }
 
+.left {
+    display: inline-block;
+    width: 48%;
+    text-align: justify;
+    padding-right: 2.5rem;
+}
+
+.right {
+    display: inline-block;
+    width: 40%;
+    padding-left: 2.5rem;
+    text-align: center;
+}
+
+.details-img {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.description {
+    text-align: justify;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.price {
+    font-family: Nico Moji, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.details-console-brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#add-to-cart {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #FEE281;
+    border: 1px solid #000000;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+
+}
 
 .site-footer {
     background-color:#003049;
@@ -273,4 +315,24 @@ a:hover {
     padding-bottom: 160px;
 }
 
+#sign-up-link {
+    font-family: Roboto, sans-serif;
+    color: blue !important;
+    text-decoration: underline blue;
+}
 
+.order-by-option {
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
+
+.order-by-option:focus {
+    font-weight: bold;
+}
+
+.profile-image {
+    width: 35px;
+
+}

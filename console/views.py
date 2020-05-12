@@ -21,20 +21,25 @@ def search_results(request):
         context = {'consoles': consoles}
         return render(request, 'console/filterindex.html', context)
 
-# def get_consoles_by_brand(request, brand):
-#
-#     print(brand, 'getting consoles!')
-#     return render(request, 'console/filterindex.html', {'consoles': []})
-#
-#
-# def get_consoles_by_type(request, type):
-#     print(type, 'getting by types')
-#     return render(request, 'console/filterindex.html', {'consoles': []})
+
+def order_by(request):
+    if 'order_by' in request.GET:
+        attribute = request.GET['order_by']
+        if attribute == "price_desc":
+            consoles = [console for console in Console.objects.all().order_by('-price')]
+        elif attribute == "price_asc":
+            consoles = [console for console in Console.objects.all().order_by('price')]
+        elif attribute == "name":
+            consoles = [console for console in Console.objects.all().order_by('name')]
+        # else:
+        #     # TODO: Error handling. Not possible to order by.
+
+        context = {'consoles': consoles}
+        return render(request, 'console/filterindex.html', context)
 
 
 def get_consoles_by_group(request):
     path = request.path
-
     group = path.strip().split('/')[2]
 
     if group == 'nintendo':
@@ -62,6 +67,6 @@ def get_consoles_by_group(request):
 
 
 def get_console_by_id(request, id):
-    return render(request, 'console/console_details.html', {
-        'console': get_object_or_404(Console, pk=id)
-    })
+    context = {'console': get_object_or_404(Console, pk=id)}
+    return render(request, 'console/console_details.html', context)
+
