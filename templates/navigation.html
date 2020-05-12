@@ -18,7 +18,9 @@
             <li><a class="nav-link" href="{% url 'brand-index' %}">Brands</a></li>
             <li><a class="nav-link" href="{% url 'aboutus-index' %}">About Us</a></li>
             {% if user.is_authenticated %}
-                <img src="{{ user.profile.profile_image }}" class="profile-image" />
+                <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+                <li><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+
             {% else %}
                 <li><a href="{% url 'login' %}" class="nav-link">Login</a></li>
             {% endif %}

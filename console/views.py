@@ -37,9 +37,9 @@ def order_by(request):
         context = {'consoles': consoles}
         return render(request, 'console/filterindex.html', context)
 
+
 def get_consoles_by_group(request):
     path = request.path
-
     group = path.strip().split('/')[2]
 
     if group == 'nintendo':
@@ -69,3 +69,4 @@ def get_consoles_by_group(request):
 def get_console_by_id(request, id):
     context = {'console': get_object_or_404(Console, pk=id)}
     return render(request, 'console/console_details.html', context)
+

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'console.apps.ConsoleConfig',
     'brand.apps.BrandConfig',
     'aboutus.apps.AboutusConfig',
@@ -132,3 +133,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+LOGIN_URL = '/user/login'
+LOGIN_REDIRECT_URL = '/user/profile'
