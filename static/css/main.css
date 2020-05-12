@@ -40,7 +40,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-
 .navbar-nav {
     float: right;
 }
@@ -155,7 +154,7 @@ a:hover {
 }
 
 .consoles .console:hover {
-    background-image: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black);
+    background-image: linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
@@ -186,10 +185,11 @@ a:hover {
 }
 
 .brand {
+    width: 700px;
     display: grid;
     justify-items: center;
     align-items: center;
-    border-radius: 0;
+    border-radius: 10px;
     margin: 0;
 }
 
@@ -326,7 +326,16 @@ a:hover {
     text-decoration: underline blue;
 }
 
+.order-by-option {
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
 
+.order-by-option:focus {
+    font-weight: bold;
+}
 #cart-dropdown{
     padding-top: 7px;
     padding-right: 5px;
@@ -473,6 +482,10 @@ a:hover {
     text-align: end;
 }
 
+.profile-image {
+    width: 35px;
+
+}
 .console-name{
 
 }
