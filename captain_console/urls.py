@@ -18,7 +18,7 @@ from django.urls import path, include
 import console
 # '' = Default home page
 urlpatterns = [
-    path('', include('console.urls')),
+    path('', include('homepage.urls')),
     path('admin/', admin.site.urls),
     path('consoles/', include('console.urls')),
     path('brands/', include('brand.urls')),
