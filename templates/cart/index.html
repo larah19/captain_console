@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="title">Cart</h2>
+    <div class="cart">
+    <div class="cart-row">
+        <span class="cart-item cart-header cart-column">Item</span>
+        <span class="cart-price cart-header cart-column">Price</span>
+        <span class="cart-quantity cart-header cart-column">Quantity</span>
+    </div>
+    <div class="cart-items">
+    </div>
+    <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+    </div>
+    </div>
+    <button class="btn btn-default btn-checkout" id="checkout" type="button">Checkout</button>
+{% endblock %}
