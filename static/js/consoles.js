@@ -49,11 +49,41 @@ document.getElementById("price-desc").onclick = function () {
     window.location = '/consoles/order_by/?order_by=price_desc';
 };
 
-
-
 $(document).ready(function() {
     $('#checkout').on('click', function(e) {
         // TODO: Function that translate cart into order-objects and adds it to the database
         console.log('Cart turned to order')
     });
 });
+//
+
+// $(document).ready(function() {
+//     $('#console-clicked').on('click', function() {
+//         consoleId = "{{id}}";
+//         items = 5;
+//         if(parseInt(consoleId) != "NaN" && typeof $.cookie('lastVisited') == "undefined") {
+//             $.cookie('lastVisited', consoleId, {
+//                 expires: 70,
+//                 path: '/'
+//             });
+//         } else {
+//             currentValues = $.cookie('lastVisited');
+//             currentValues = currentValues.split(',');
+//             if($.inArray(consoleId, currentValues) > -1) {
+//                 currentValues.splice($.inArray(consoleId, currentValues), 1)
+//             }
+//             currentValues.push(consoleId)
+//             if(currentValues.length > items) {
+//                 $.cookie('lastVisited', currentValues.splice(-items), {
+//                     expires: 70,
+//                     path: '/'
+//                 });
+//             } else {
+//                 $.cookie('lastVisited', currentValues, {
+//                     expires: 70,
+//                     path: '/'
+//                 });
+//             }
+//         }
+//     });
+// });
