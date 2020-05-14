@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="title">{{ console.name }}</h1>
+    <h1 class="title" id="console_name">{{ console.name }}</h1>
 
     <div class="left">
         <p class="details-console-brand">Brand: {{ console.brand.name }}</p>
@@ -14,6 +14,7 @@
     <div class="right">
         <img src="{{ console.consoleimage_set.first.image}}" class="details-img" />
         <p class="price" id="console-price">${{ console.price }}</p>
+        <!--<a href="/cart/add/{{ console.id }}" class="btn btn-default" id="add-to-cart">Add to Cart</a>-->
         <button type="button" id="add-to-cart" class="btn btn-default">Add to Cart</button>
     </div>
 
