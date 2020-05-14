@@ -482,6 +482,78 @@ a:hover {
     text-align: end;
 }
 
+#homepage-box{
+    /* Consoles */
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+
+    position: absolute;
+    width: 1700px;
+    height: 350px;
+    left: 100px;
+    top: 200px;
+
+    /* Sunset */
+
+    background: linear-gradient(180deg, #F25F5C 0%, #D62828 0.01%, #FFE382 100%);
+    border-radius: 10px;
+}
+
+#homepage-item-playstation{
+    position: static;
+    width: 10%;
+    height: 10%;
+    left: 500px;
+    top: 50px;
+
+    /* Main Color */
+
+    border: 3px solid #FCBF49;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    /* Inside Auto Layout */
+
+    order: 0;
+    align-self: center;
+    margin: 150px 0px;
+}
+
+#homepage-item-sega{
+        /* SEGA */
+
+    position: static;
+    width: 100px;
+    height: 100px;
+    left: 500px;
+    top: 50px;
+
+    /* Main Color */
+
+    border: 3px solid #FCBF49;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: center;
+    margin: 150px 0px;
+}
+
+
+
+
+
+
+
+
+
 .profile-image {
     width: 35px;
 
