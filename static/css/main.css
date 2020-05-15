@@ -410,6 +410,9 @@ a:hover {
     width: 45%;
 }
 
+#cart-items{
+}
+
 .cart-price {
     width: 18%;
     font-size: 1.2em;
@@ -507,6 +510,10 @@ a:hover {
 }
 
 .console-price{
+
+}
+
+#cart{
 
 }
 
