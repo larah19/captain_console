@@ -8,3 +8,11 @@ def index(request):
 
 def payment(request):
     return render(request, 'checkout/payment.html')
+
+
+def confirmation(request):
+    return render(request, 'checkout/confirm.html')
+
+
+def success(request):
+    return render(request, 'checkout/success.html')

@@ -6,6 +6,11 @@ $(document).ready(function() {
         });
     });
 
+function clear_local_storage() {
+    localStorage.clear()
+    return
+}
+
 
 function addToCartClicked() {
     var id = window.location.pathname.split('/').pop();
