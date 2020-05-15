@@ -6,7 +6,6 @@ $(document).ready(function() {
 });
 
 document.getElementById("name-az").onclick = function () {
-    console.log("hello world");
     window.location = '/consoles/order_by/?order_by=name';
 };
 
