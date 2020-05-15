@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Billing</h3>
+
+    <div class='hideable_billing_form'>
+                <div class="row">
+                <div class="col-lg-8 col-md-8 md-form mb-5">
+                    <label for="Name_Of_Cardholder class=">Name of cardholder</label>
+                    <input type='text' placeholder='Jon Jonsson' id='card_holder' name='card_holder' class='form-control' />
+                </div>
+
+                  <div class="col-lg-4 col-md-12 mb-4">
+                    <label for="Expiration Date">Expiration Date</label>
+                      <input type='text' placeholder='Expiration date' id='exp_date' name='exp_date' class='form-control' />
+                  </div>
+                </div>
+                  <div class="row">
+                  <div class="col-lg-1 col-md-2 mb-5">
+                    <label for="CVC">CVC</label>
+                    <input type='text' placeholder='CVC' id='CVC' name='CVC' class='form-control' />
+                  </div>
+                      <div class="col-lg-4 col-md-2 mb-5">
+                          <label for="CardNum">Card Number</label>
+                          <input type='text' placeholder='Card Number' id='card_number' name='card_number' class='form-control' />
+                      </div>
+                  </div>
+                  <hr>
+                  <h4>Delivery Method</h4>
+                  <input type="radio" id="pickup" name="delivery" value="pickup">
+                  <label for="pickup">Pickup</label><br>
+                  <input type="radio" id="deliver" name="delivery" value="deliver">
+                  <label for="deliver">Home Delivery</label><br>
+              <hr>
+
+                  <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
+    </div>
+{% endblock content %}
