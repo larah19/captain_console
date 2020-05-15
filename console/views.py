@@ -1,7 +1,6 @@
-from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from console.models import Console
-from django.shortcuts import redirect
+from user.models import SearchHistory
 
 
 def index(request):
@@ -67,6 +66,21 @@ def get_consoles_by_group(request):
 
 
 def get_console_by_id(request, id):
+    user = request.user
+    if user.is_authenticated:
+        search_history = SearchHistory.objects.select_related('console').filter(user_id=request.user.id).order_by('-time')
+        # search_history = list(map(lambda x: x.console, search_history))
+        for entry in search_history:
+            # If the console is already in the search history, delete the old entry.
+            if entry.console_id == id:
+                remove_entry = SearchHistory.objects.get(id=entry.id)
+                remove_entry.delete()
+                break
+        # Only store 4 recently viewed links for each user.
+        if len(search_history) >= 8:
+            remove_entry = SearchHistory.objects.order_by('time').first()
+            remove_entry.delete()
+        SearchHistory.objects.create(user_id=user.id, console_id=id)
     context = {'console': get_object_or_404(Console, pk=id)}
     return render(request, 'console/console_details.html', context)
 
