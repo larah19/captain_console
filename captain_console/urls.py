@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+import console
+# '' = Default home page
 urlpatterns = [
-    path('', include('console.urls')),
+    path('', include('homepage.urls')),
     path('admin/', admin.site.urls),
     path('consoles/', include('console.urls')),
     path('brands/', include('brand.urls')),
-    path('aboutus/', include('aboutus.urls'))
+    path('aboutus/', include('aboutus.urls')),
+    path('user/', include('user.urls')),
+    path('cart/',include('cart.urls')),
+    path('checkout/',include('checkout.urls'))
 ]

@@ -1,25 +1,9 @@
-from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from console.models import Console
-from django.shortcuts import redirect
+from user.models import SearchHistory
 
 
 def index(request):
-    if 'search_filter' in request.GET:
-        search_filter = request.GET['search_filter']
-        consoles = [{
-            'id': x.id,
-            'name': x.name,
-            'description': x.description,
-            'price': x.price,
-            'firstImage': x.consoleimage_set.first().image
-        } for x in Console.objects.filter(name__icontains=search_filter)]
-        # TODO: Exception handling, No results.
-        # TODO: Find a way to make Json Response format into a different HTML file, not index.html
-        # return JsonResponse({'data': consoles})
-        result = {'search_result': consoles}
-        return redirect('')     # render(request, 'console/filterindex.html', result)
-
     context = {'nintendo': Console.objects.filter(brand_id=1).order_by('name'),
                'microsoft': Console.objects.filter(brand_id=2).order_by('name'),
                'sony': Console.objects.filter(brand_id=3).order_by('name'),
@@ -28,23 +12,35 @@ def index(request):
     return render(request, 'console/index.html', context)
 
 
-def get_consoles_by_brand(request, brand):
-
-    print(brand, 'getting consoles!')
-    return render(request, 'console/filterindex.html', {'consoles': []})
-
-
-def get_consoles_by_type(request, type):
-    print(type, 'getting by types')
-    return render(request, 'console/filterindex.html', {'consoles': []})
+def search_results(request):
+    if 'search_filter' in request.GET:
+        search_filter = request.GET['search_filter']
+        consoles = [console for console in Console.objects.filter(name__icontains=search_filter)]
+        # TODO: Exception handling, if no results.
+        context = {'consoles': consoles}
+        return render(request, 'console/filterindex.html', context)
 
 
-def get_consoles_by_group(request, group):
+def order_by(request):
+    if 'order_by' in request.GET:
+        attribute = request.GET['order_by']
+        if attribute == "price_desc":
+            consoles = [console for console in Console.objects.all().order_by('-price')]
+        elif attribute == "price_asc":
+            consoles = [console for console in Console.objects.all().order_by('price')]
+        elif attribute == "name":
+            consoles = [console for console in Console.objects.all().order_by('name')]
+        # else:
+        #     # TODO: Error handling. Not possible to order by.
+
+        context = {'consoles': consoles}
+        return render(request, 'console/filterindex.html', context)
+
+
+def get_consoles_by_group(request):
     path = request.path
-
     group = path.strip().split('/')[2]
 
-    print(group, 'foooooooooo')
     if group == 'nintendo':
         context = {'consoles': Console.objects.filter(brand_id=1).order_by('name'),
                    'group': 'Nintendo'}
@@ -69,8 +65,22 @@ def get_consoles_by_group(request, group):
     return render(request, 'console/filterindex.html', context)
 
 
-
 def get_console_by_id(request, id):
-    return render(request, 'console/console_details.html', {
-        'console': get_object_or_404(Console, pk=id)
-    })
+    user = request.user
+    if user.is_authenticated:
+        search_history = SearchHistory.objects.select_related('console').filter(user_id=request.user.id).order_by('-time')
+        # search_history = list(map(lambda x: x.console, search_history))
+        for entry in search_history:
+            # If the console is already in the search history, delete the old entry.
+            if entry.console_id == id:
+                remove_entry = SearchHistory.objects.get(id=entry.id)
+                remove_entry.delete()
+                break
+        # Only store 4 recently viewed links for each user.
+        if len(search_history) >= 8:
+            remove_entry = SearchHistory.objects.order_by('time').first()
+            remove_entry.delete()
+        SearchHistory.objects.create(user_id=user.id, console_id=id)
+    context = {'console': get_object_or_404(Console, pk=id)}
+    return render(request, 'console/console_details.html', context)
+

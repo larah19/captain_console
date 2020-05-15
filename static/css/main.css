@@ -1,10 +1,12 @@
+@import url(//fonts.googleapis.com/earlyaccess/nicomoji.css);
+
+
 * {
     box-sizing: border-box;
-    font-family: 'Roboto';
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway';
+    font-family: Roboto, sans-serif;
     font-weight: bold;
 }
 
@@ -18,17 +20,20 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, #F25F5C 0%, #D62828 .01%, #FFE382 100%);
+    background: linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%);
 }
 
 .category {
+    font-family: 'Nico Moji', sans-serif;
     text-align: center;
-    text-decoration: underline;
+    font-size: 28px;
 }
 
 #nav-options {
     text-align: right;
+    font-family: 'Nico Moji', sans-serif;
 }
+
 
 .nav-link {
     font-size: 20px;
@@ -36,13 +41,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-nav {
-    float:right;
+    float: right;
 }
 
 .navbar-brand {
     position: relative;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
+    font-family: Nico Moji, sans-serif;
 }
 
 #navbar-animation {
@@ -55,12 +61,24 @@ h1, h2, h3, h4, h5, h6 {
     animation: animate-navbar 3s linear infinite alternate;
 }
 
+#search-align{
+    padding-top: 10px;
+    padding-left: 7px;
+}
+
 #search-box {
     width: 75%;
+    font-family: Roboto, sans-serif;
 }
 
 #search-btn {
     display: block;
+    height: 35px;
+    width: 35px;
+    background-image: url(https://simpleicon.com/wp-content/uploads/active-search.svg);
+    background-size: 35px 35px;
+    background-color: white;
+    background-position: center;
 }
 
 .input-group {
@@ -136,7 +154,7 @@ a:hover {
 }
 
 .consoles .console:hover {
-    background-image: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black);
+    background-image: linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%), linear-gradient(180deg, #F25F5C 0%, #d62828 .01%, #FFE382 100%);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
@@ -167,10 +185,11 @@ a:hover {
 }
 
 .brand {
+    width: 700px;
     display: grid;
     justify-items: center;
     align-items: center;
-    border-radius: 0;
+    border-radius: 10px;
     margin: 0;
 }
 
@@ -187,16 +206,388 @@ a:hover {
 }
 
 .profile-image {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    float: right;
-    border-radius: 50%;
+    display: inline-block;
+    max-width: 300px;
+    height: auto;
+    float: left;
+}
+
+.title {
+    font-family: 'Nico Moji', cursive;
 }
 
 .aboutus {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
     background-color: white;
     border-style: solid;
+    padding: 3rem;
     border-radius: 10px;
     border-color: #FCBF49;
+}
+#aboutus-img {
+    float: right;
+    width: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.left {
+    display: inline-block;
+    width: 48%;
+    text-align: justify;
+    padding-right: 2.5rem;
+}
+
+.right {
+    display: inline-block;
+    width: 40%;
+    padding-left: 2.5rem;
+    text-align: center;
+}
+
+.profile-info {
+    display: flex;
+}
+
+.left-profile {
+    margin-top: 25px;
+    display: inline-block;
+    width: 35%;
+    padding-right: 2.5rem;
+}
+
+.right-profile {
+    display: inline-block;
+    width: 50%;
+    padding-left: 2.5rem;
+}
+
+.search-history {
+    margin-top: 3rem;
+}
+
+.details-img {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.description {
+    text-align: justify;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.price {
+    font-family: Nico Moji, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.details-console-brand {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#add-to-cart {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background: #FEE281;
+    border: 1px solid #000000;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+
+}
+
+.site-footer {
+    background-color:#003049;
+    padding-top:15px;
+    padding-bottom:5px ;
+    font-size:12px;
+    line-height: 24px;
+    color:#fff;
+    font-family: Roboto, sans-serif;
+    bottom: 0;
+    position: fixed;
+    width: 100%
+}
+
+.site-footer hr {
+  border-top-color:#bbb;
+  opacity:0.5;
+   size: 5px;
+}
+
+.site-footer h5 {
+    color:#fff;
+    font-size:20px;
+    text-transform:uppercase;
+    margin-top: 7px;
+    letter-spacing:2px;
+    font-family: Nico Moji, sans-serif;
+    line-height: 1.10;
+}
+
+.site-footer ul {
+    line-height: 0.5;
+    list-style: none;
+    padding-left: 0;
+}
+
+.base {
+    padding-bottom: 160px;
+}
+
+#sign-up-link {
+    font-family: Roboto, sans-serif;
+    color: blue !important;
+    text-decoration: underline blue;
+}
+
+.order-by-option {
+    border: none;
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}
+
+.order-by-option:focus {
+    font-weight: bold;
+}
+#cart-dropdown{
+    padding-top: 7px;
+    padding-right: 5px;
+    float: right;
+}
+
+.cart-btn{
+    overflow: auto;
+    padding: 3px;
+    margin: 3px;
+    font-size: 16px;
+}
+
+.cart-menu{
+    z-index: 2;
+    position: absolute;
+}
+#cart-count{
+    background-color: #FEE281;
+    color: black;
+    font-family: Roboto, sans-serif;
+    border: black;
+}
+
+.cart{
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #FCBF49;
+}
+
+.cart-header {
+    font-weight:bold;
+    font-size: 1.25em;
+    color: #333;
+    font-family: Roboto, sans-serif, sans-serif;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 3px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+#cart-items{
+}
+
+.cart-price {
+    width: 18%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 25%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 24px ;
+    color: black;
+    margin-right: 20px;
+    font-family: Nico Moji, sans-serif;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.3em;
+    font-family: Roboto, sans-serif;
+}
+
+
+.btn-checkout {
+    float: right;
+    margin-top: 30px;
+}
+
+#checkout{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background: #FEE281;
+    border: 1px solid #000000;
+    box-shadow: -4px 4px 4px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    text-align: end;
+}
+
+.console-name{
+
+}
+
+.console-price{
+
+}
+
+#cart{
+
+}
+
+#homepage-box {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    position: absolute;
+    width: 1500px;
+    height: 350px;
+    left: 225px;
+    top: 250px;
+    background: linear-gradient(180deg, #F25F5C 0%, #D62828 0.01%, #FFE382 100%);
+    border-radius: 10px;
+    justify-content: space-around;
+}
+
+#homepage-item-playstation {
+    width: 300px;
+    height: 250px;
+    left: 50px;
+    top: 500px;
+    padding-top: 50px;
+    padding-left: 50px;
+    border: 3px solid #FCBF49;
+    box-sizing: border-box;
+    border-radius: 10px;
+    order: 0;
+    align-self: center;
+
+}
+
+#homepage-item-sega {
+    width: 300px;
+    height: 250px;
+    left: 500px;
+    top: 50px;
+    padding-top: 80px;
+    padding-left: 50px;
+    border: 3px solid #FCBF49;
+    box-sizing: border-box;
+    border-radius: 10px;
+    order: 1;
+    align-self: center;
+
+}
+
+#homepage-item-nintendo {
+    width: 300px;
+    height: 250px;
+    left: 950px;
+    top: 50px;
+    padding-top: 65px;
+    padding-left: 50px;
+    mix-blend-mode: normal;
+    border: 3px solid #FCBF49;
+    box-sizing: border-box;
+    border-radius: 10px;
+    order: 2;
+    align-self: center;
+
+}
+
+#homepage-item-xbox {
+    width: 300px;
+    padding-top: 20px;
+    padding-left: 50px;
+    height: 250px;
+    left: 1400px;
+    top: 50px;
+    border-radius: 10px;
+    mix-blend-mode: normal;
+    border: 3px solid #FCBF49;
+    box-sizing: border-box;
+    order: 3;
+    align-self: center;
 }

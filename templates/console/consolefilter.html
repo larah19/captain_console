@@ -1,3 +1,6 @@
+
+{#TODO: Make more efficient, so it does not need to be rendered every time a console page is loaded.#}
+
 <nav class="navbar navbar-default" id="filter-navbar">
     <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -25,3 +28,11 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<div class="order-by">
+    <p>Order all products by:
+        <button class="order-by-option" id="name-az">Name</button>,
+        <button class="order-by-option" id="price-desc">Highest price</button>,
+        <button class="order-by-option" id="price-asc">Lowest price</button>
+    </p>
+</div>

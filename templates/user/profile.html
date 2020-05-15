@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="profile-info">
+        <div class="left-profile">
+            <img src="{{ user.customer.profile_image }}" class="profile-image"/>
+        </div>
+        <div class="right-profile">
+            <h2 class="title">{{ user.first_name }} {{ user.last_name }}</h2>
+            <p>Username: {{ user.username }}</p>
+            <h4>Edit information</h4>
+            <form class="form form-horizontal" method="post">
+                {% csrf_token %}
+                {{ profile_form|crispy }}
+                {{ image_form|crispy }}
+                <input type="submit" class="btn btn-primary" value="Update" />
+            </form>
+        </div>
+    </div>
+    <div class="search-history">
+        <h4>Recently Viewed</h4>
+            <div class="consoles">
+                {% for console in search_history %}
+                    {% include 'console/single_console.html' with console=console %}
+                {% endfor %}
+            </div>
+    </div>
+{% endblock %}
