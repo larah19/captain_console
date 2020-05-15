@@ -25,6 +25,12 @@
                 <li><a href="{% url 'login' %}" class="nav-link">Login</a></li>
             {% endif %}
             <li><a class="nav-link" href="{% url 'cart-index' %}" id="cart">Cart <span class="badge cart-count" id="cart-count">0</span></a>
+                 <script type="text/javascript">
+                if(localStorage.getItem('cart_quantity') === null){
+                    localStorage.setItem('cart_quantity', JSON.stringify(0))
+                }
+                document.getElementById("cart-count").innerText = localStorage.getItem('cart_quantity')
+               </script>
             </li>
             <li>
                 <div class="input-group" id="search-align">
@@ -35,7 +41,6 @@
                 </div>
             </li>
         </ul>
-
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
