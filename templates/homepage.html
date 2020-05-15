@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2 class="title">this will be the homepage</h2>
+    <div id="homepage-box">
+        <a href="/consoles/sony">
+            <div id="homepage-item-playstation">
+                <img class="console-img" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Playstation_logo_colour.svg">
+            </div>
+        </a>
+        <a href="/consoles/sega">
+            <div id="homepage-item-sega">
+                <img class="console-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/SEGA_logo.svg/1280px-SEGA_logo.svg.png">
+            </div>
+        </a>
+        <a href="/consoles/nintendo">
+            <div id="homepage-item-nintendo">
+                <img class="console-img" src="https://cdn02.nintendo-europe.com/media/images/10_share_images/others_3/SI_GenericNintendo.jpg">
+            </div>
+        </a>
+        <a href="/consoles/microsoft">
+            <div id="homepage-item-xbox">
+                <img class="console-img" src="https://compass-ssl.xbox.com/assets/16/9a/169a7ffe-c2c7-463a-a77c-21239c9ac388.jpg?n=Xbox_Sharing_Xbox-2019-White-on-Green_200x200.jpg">
+            </div>
+        </a>
+    </div>
 
 {% endblock %}
