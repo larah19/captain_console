@@ -77,7 +77,7 @@ def get_console_by_id(request, id):
                 remove_entry.delete()
                 break
         # Only store 4 recently viewed links for each user.
-        if len(search_history) >= 4:
+        if len(search_history) >= 8:
             remove_entry = SearchHistory.objects.order_by('time').first()
             remove_entry.delete()
         SearchHistory.objects.create(user_id=user.id, console_id=id)
