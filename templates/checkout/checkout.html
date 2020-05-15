@@ -13,14 +13,14 @@
 
                 <div>
                     <label for="full_name" class="">Name</label>
-                    <input type='text' placeholder='Jon Jonsson' id='full_name' name='Full_Name' class='form-control' />
+                    <input id="full_name" type='text' placeholder='Jon Jonsson' id='full_name' name='Full_Name' class='form-control' />
                 </div>
 
 
                 <div class="row">
                   <div class="col-lg-4 col-md-12 mb-4">
                       <label for="country">Country</label>
-                      <input type='text' placeholder='Iceland' id='country' name='Country' class='form-control' />
+                      <input id="country" type='text' placeholder='Iceland' id='country' name='Country' class='form-control'/>
                       {{ form.shipping_country }}
                       <div class="invalid-feedback">
                           Please select a valid country.
@@ -28,19 +28,15 @@
                   </div>
                   <div class="col-lg-4 col-md-6 mb-4">
                     <label for="shipping_zip">Zip</label>
-                    <input type='text' placeholder='Zip code' id='shipping_zip' name='shipping_zip' class='form-control' />
+                    <input id="zip_code" type='text' placeholder='Zip code' id='shipping_zip' name='shipping_zip' class='form-control' />
                     <div class="invalid-feedback">
                       Zip code required.
                     </div>
                   </div>
                 </div>
-
               </div>
-
               <hr>
-
               <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
-
 
             </form>
 
@@ -50,5 +46,11 @@
       </div>
 
     </div>
+
+    <script id="checkout_script">
+        localStorage.setItem("fullname", document.getElementById("full_name").value);
+        localStorage.setItem("country", document.getElementById("country").value);
+        localStorage.setItem("zip_code", document.getElementById("zip_code").value);
+    </script>
 
 {% endblock content %}

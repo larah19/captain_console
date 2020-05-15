@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h3>Billing</h3>
-
+    <form action="confirm" class="card-body">
     <div class='hideable_billing_form'>
                 <div class="row">
                 <div class="col-lg-8 col-md-8 md-form mb-5">
@@ -31,7 +31,21 @@
                   <input type="radio" id="deliver" name="delivery" value="deliver">
                   <label for="deliver">Home Delivery</label><br>
               <hr>
+                  <button id="pay_up" class="btn btn-primary btn-lg btn-block" type="submit">Finalize</button>
+            </div>
+    </form>
 
-                  <button class="btn btn-primary btn-lg btn-block" type="submit">Continue</button>
-    </div>
+    <script id="payment_script">
+        localStorage.setItem("card_name", document.getElementById("card_holder").value);
+        localStorage.setItem("pickup", document.getElementById("pickup").value);
+        localStorage.setItem("deliver", document.getElementById("deliver").value);
+
+
+        $(document).ready(function() {
+            $('#pay_up').on('click', function(e) {
+        localStorage.clear();
+        });
+        });
+
+    </script>
 {% endblock content %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <h3>Congratulations, payment has been received. Your order number is:</h3>
+    <br>
+    <h1 id="randint">9223-8593</h1>
+
+    <script>
+        document.getElementById("result").innerHTML = localStorage.getItem("card_holder");
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="/">
+        <button onclick="clear_local_storage()"  id="pay_up" class="btn btn-primary btn-lg btn-block" type="submit">Finalize</button>
+    </a>
+{% endblock content %}
