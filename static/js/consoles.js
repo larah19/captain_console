@@ -55,35 +55,3 @@ $(document).ready(function() {
         console.log('Cart turned to order')
     });
 });
-//
-
-// $(document).ready(function() {
-//     $('#console-clicked').on('click', function() {
-//         consoleId = "{{id}}";
-//         items = 5;
-//         if(parseInt(consoleId) != "NaN" && typeof $.cookie('lastVisited') == "undefined") {
-//             $.cookie('lastVisited', consoleId, {
-//                 expires: 70,
-//                 path: '/'
-//             });
-//         } else {
-//             currentValues = $.cookie('lastVisited');
-//             currentValues = currentValues.split(',');
-//             if($.inArray(consoleId, currentValues) > -1) {
-//                 currentValues.splice($.inArray(consoleId, currentValues), 1)
-//             }
-//             currentValues.push(consoleId)
-//             if(currentValues.length > items) {
-//                 $.cookie('lastVisited', currentValues.splice(-items), {
-//                     expires: 70,
-//                     path: '/'
-//                 });
-//             } else {
-//                 $.cookie('lastVisited', currentValues, {
-//                     expires: 70,
-//                     path: '/'
-//                 });
-//             }
-//         }
-//     });
-// });

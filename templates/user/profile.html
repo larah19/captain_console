@@ -21,25 +21,10 @@
     </div>
     <div class="search-history">
         <h4>Recently Viewed</h4>
-{#            {% if globals.cookie.lastVisited %}#}
-{#                {% assign prodIds = globals.cookie.lastVisited | append: "]" | prepend: "[" | split: "%2C" | join: "," %}#}
-{#                {module_data resource="products" version="v3" fields="canonicalUrl, name, smallImage" where="\{'id':\{'$in': {{prodIds}} \}\}" collection="lastProducts" template=""}#}
-{#                <h4>Your last visited products:</h4>#}
-{#                <ul>#}
-{#                    {% for item in lastProducts.items %}#}
-{#                        <li><a alt="{{item.name}}" href="{{item.canonicalUrl}}"><img alt="{{item.name}}" src="{{item.smallImage}}?Action=thumbnail&Width=50&Height=50"/></a></li>#}
-{#                    {% endfor %}#}
-{#                </ul>#}
-{#            {% endif %}#}
-{#            {% for console in history_list %}#}
-{#                {% include 'console/single_console.html' with console=console %}#}
-{#            {% endfor %}#}
-    {% for history in history_list %}
-        <tr>
-            <td>{{ history.content.object }}</td>
-            <td>{{ history.time }}</td>
-            <td><a href="a" class="btn btn-danger">Delete</a></td>
-        </tr>
-    {% endfor %}
+            <div class="consoles">
+                {% for console in search_history %}
+                    {% include 'console/single_console.html' with console=console %}
+                {% endfor %}
+            </div>
     </div>
 {% endblock %}
